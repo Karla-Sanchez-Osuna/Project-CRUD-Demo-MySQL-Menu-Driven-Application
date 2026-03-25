@@ -16,9 +16,6 @@ The current lesson focuses on **updating** project data and **deleting** a proje
 8. [Menu Options](#menu-options)  
 9. [Application Screenshot](#application-screenshot)  
 10. [Learning Objectives](#learning-objectives)  
-11. [Testing](#testing)  
-12. [Contributing](#contributing)  
-13. [License](#license)  
 
 ---  
 
