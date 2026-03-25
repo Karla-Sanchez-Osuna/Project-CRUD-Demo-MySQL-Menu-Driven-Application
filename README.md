@@ -51,7 +51,7 @@ All database interactions are performed with **JDBC prepared statements**, and t
 | Build | Maven |
 | Database | MySQL 5.7+ (InnoDB) |
 | JDBC driver | MySQL Connector/J 8.0+ |
-| Testing | JUnit 5 (H2 in‑memory for unit tests) |
+
 
 ---  
 
