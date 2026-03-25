@@ -193,7 +193,3 @@ For manual verification, perform an **Update** or **Delete** and then use the **
 Maintain the existing code style (Google Java Style) and update this README if new functionality is added.
 
 ---  
-
-## License  
-
-This project is licensed under the **MIT License**. See the `LICENSE` file for full terms.
