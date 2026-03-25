@@ -169,7 +169,7 @@ CREATE TABLE project_category (
 3. **Configure the JDBC connection** – edit `src/main/resources/db.properties`  
 
    ```properties
-   jdbc.url=jdbc:mysql://localhost:3306/project_demo
+   jdbc.url=jdbc:mysql://localhost:3306/projects
    jdbc.username=YOUR_USERNAME
    jdbc.password=YOUR_PASSWORD
    ```
