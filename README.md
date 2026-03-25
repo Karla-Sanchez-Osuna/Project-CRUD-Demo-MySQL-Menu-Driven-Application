@@ -14,7 +14,6 @@ The current lesson focuses on **updating** project data and **deleting** a proje
 6. [Setup & Installation](#setup--installation)  
 7. [Running the Application](#running-the-application)  
 8. [Menu Options](#menu-options)  
-9. [Application Screenshot](#application-screenshot)  
 10. [Learning Objectives](#learning-objectives)  
 
 ---  
@@ -190,14 +189,17 @@ CREATE TABLE project_category (
 When started you’ll see:
 
 ```
-=== Project CRUD Demo ===
-1) Add a project
-2) List projects
-3) Select a project
-4) Update project details
-5) Delete a project
-0) Exit
-Enter your selection:
+Please make a numeric selection, or press Enter to quit.
+   1) Add a project
+   2) List projects
+   3) Select a project
+   4) Update project details
+   5) Delete a project
+
+You are not working with this project.
+Enter a menu selection:
+
+
 ```
 
 Enter the number of the desired operation and follow the prompts. All inputs are validated; invalid entries simply return you to the menu.
@@ -213,26 +215,11 @@ Enter the number of the desired operation and follow the prompts. All inputs are
 | **3)** | **Select a project** – Choose a project to work with. |
 | **4)** | **Update project details** – Modify one or more fields of the selected project. |
 | **5)** | **Delete a project** – Remove a project by ID; related rows in `material`, `step`, and `project_category` are deleted automatically via cascade. |
-| **0)** | **Exit** – Close the JDBC connection cleanly and terminate the program. |
+
 
 ---  
 
-## Application Screenshot  
 
-The initial screen of the application looks like this:
-
-![Initial Screen](screenshot.png)
-
-The menu offers options to:
-- **Add a project**  
-- **List projects**  
-- **Select a project** to work with  
-- **Update project details**  
-- **Delete a project**  
-
-The message *"You are not working with this project."* indicates that no project is currently selected.
-
----  
 
 ## Learning Objectives  
 
