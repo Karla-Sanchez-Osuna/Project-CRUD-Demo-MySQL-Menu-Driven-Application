@@ -14,9 +14,11 @@ The current lesson focuses on **updating** project data and **deleting** a proje
 6. [Setup & Installation](#setup--installation)  
 7. [Running the Application](#running-the-application)  
 8. [Menu Options](#menu-options)  
-9. [Learning Objectives](#learning-objectives)  
-
-
+9. [Application Screenshot](#application-screenshot)  
+10. [Learning Objectives](#learning-objectives)  
+11. [Testing](#testing)  
+12. [Contributing](#contributing)  
+13. [License](#license)  
 
 ---  
 
@@ -192,16 +194,16 @@ When started you’ll see:
 
 ```
 === Project CRUD Demo ===
-1) Insert a new project
-2) List all projects
-3) View project details
-4) Update a project
+1) Add a project
+2) List projects
+3) Select a project
+4) Update project details
 5) Delete a project
 0) Exit
 Enter your selection:
 ```
 
-Enter the number of the desired operation and follow the prompts. All input is validated; erroneous entries simply return you to the menu.
+Enter the number of the desired operation and follow the prompts. All inputs are validated; invalid entries simply return you to the menu.
 
 ---  
 
@@ -209,12 +211,29 @@ Enter the number of the desired operation and follow the prompts. All input is v
 
 | Option | Action |
 |--------|--------|
-| **1** | Prompt for project data (name, estimated/actual hours, difficulty, notes) and insert it. |
-| **2** | Show a compact list of all projects (`project_id – project_name`). |
-| **3** | Ask for a `project_id` and display the full project record **plus** its associated materials, steps, and categories. |
-| **4** | Choose a project, then select which field(s) to modify; the program issues a prepared `UPDATE` and reports the number of rows affected. |
-| **5** | Delete a project by ID; MySQL automatically removes related rows in `material`, `step`, and `project_category` because of `ON DELETE CASCADE`. |
-| **0** | Gracefully close the JDBC connection and exit. |
+| **1)** | **Add a project** – Prompt for project data (name, estimated/actual hours, difficulty, notes) and insert it. |
+| **2)** | **List projects** – Show a compact list of all projects (`project_id – project_name`). |
+| **3)** | **Select a project** – Choose a project to work with. |
+| **4)** | **Update project details** – Modify one or more fields of the selected project. |
+| **5)** | **Delete a project** – Remove a project by ID; related rows in `material`, `step`, and `project_category` are deleted automatically via cascade. |
+| **0)** | **Exit** – Close the JDBC connection cleanly and terminate the program. |
+
+---  
+
+## Application Screenshot  
+
+The initial screen of the application looks like this:
+
+![Initial Screen](screenshot.png)
+
+The menu offers options to:
+- **Add a project**  
+- **List projects**  
+- **Select a project** to work with  
+- **Update project details**  
+- **Delete a project**  
+
+The message *"You are not working with this project."* indicates that no project is currently selected.
 
 ---  
 
@@ -224,11 +243,4 @@ Enter the number of the desired operation and follow the prompts. All input is v
 - **Delete** a project and rely on `ON DELETE CASCADE` to clean up child rows in `material`, `step`, and the many‑to‑many link table.  
 - **Observe** the cascade effect by checking that after a deletion the related rows are gone.  
 - **Use** the integer returned by `PreparedStatement.executeUpdate()` to determine whether the operation actually changed any rows.  
-
-
-```
-
-For manual verification, after performing an **Update** or **Delete**, run the corresponding **Read** option to see the updated state of the database.
-
----  
 
